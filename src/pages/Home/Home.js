@@ -11,7 +11,7 @@ const Home = () => {
 
   const fetchLancamentos = async () => {
     try {
-      const response = await api.get(`/lancamentos?usuario=2`);
+      const response = await api.get(`/lancamentos?usuario=${user.id}`);
       console.log(response.data);
 
       if (response.status == 200) {
